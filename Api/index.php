@@ -1,12 +1,11 @@
 <?php
 
-// Carga el autoload de Composer (necesario para Laravel)
+// Carga Composer autoload (obligatorio)
 require __DIR__ . '/../vendor/autoload.php';
 
-// Opcional: fuerza entorno production
-if (!isset($_SERVER['APP_ENV'])) {
-    $_SERVER['APP_ENV'] = 'production';
-}
+// Opcional: fuerza production
+$_ENV['APP_ENV'] = $_ENV['APP_ENV'] ?? 'production';
+$_SERVER['APP_ENV'] = 'production';
 
-// Redirige todo el tráfico al entry point real de Laravel
+// Forward directo a Laravel
 require __DIR__ . '/../public/index.php';
