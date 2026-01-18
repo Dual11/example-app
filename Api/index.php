@@ -3,8 +3,6 @@
 // Carga el autoload de Composer (necesario para Laravel)
 require __DIR__ . '/../vendor/autoload.php';
 
-require __DIR__ . '/../public/index.php';
-
 // Opcional: fuerza entorno production
 if (!isset($_SERVER['APP_ENV'])) {
     $_SERVER['APP_ENV'] = 'production';
