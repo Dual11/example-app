@@ -1,7 +1,7 @@
 services:
   #CONTENEDOR BASE DE DATOS POSTGRES_DEV
   db-dev:
-    image: postgres:18
+    image: postgres:16
     container_name: postgres_dev
     restart: always
     environment:
